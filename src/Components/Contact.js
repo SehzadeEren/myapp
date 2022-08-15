@@ -16,6 +16,7 @@ const Contact = () => {
       // setInputValue("");
       //setEmailValue("");
       //setPhoneValue("");
+      // sa
     }
     console.log(`Form submitted, ${showModal}`);
 
@@ -63,6 +64,7 @@ const Contact = () => {
         {!showModal && (inputValue === "" || emailValue === "" || phoneNumberValue === "") &&
           <div> Hata Var </div>}
       </div>
+      
       <ModalComponent show={showModal}
         inputValue={inputValue}
         emailValue={emailValue}

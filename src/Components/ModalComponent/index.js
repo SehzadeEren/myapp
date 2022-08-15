@@ -1,38 +1,8 @@
-/*import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-
-
- function modal({show,setShow}) {
- 
-  const handleClose = () => setShow(false);
-  return (
-    <>
-      <Modal
-       show={show}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          I will not close if you click outside me. Don't even try to press
-          escape key.
-        </Modal.Body>
-        <Modal.Footer>
-        <Button onClick={handleClose}>Close</Button>
-        </Modal.Footer>
-      </Modal>
-    </>
-  );
-}
-
-export default modal;     */
-
-
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
 
-export default function ModalComponent({ show ,handleClose }) {
+export default function ModalComponent({ show ,handleClose ,inputValue ,emailValue ,phoneNumberValue ,countryValue }) {
   // const [show, setShow] = useState(true);
   // const handleClose = () => setShow(false);
   //const handleShow = () => setShow(true);
@@ -45,11 +15,13 @@ export default function ModalComponent({ show ,handleClose }) {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+          <Modal.Title>Contact Information</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          I will not close if you click outside me. Don't even try to press
-          escape key.
+          Name And Surname: {inputValue} <br></br>
+          E-Mail: {emailValue} <br></br>
+          Phone Number: {phoneNumberValue} <br></br>
+          Country: {countryValue}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
