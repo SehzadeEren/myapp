@@ -1,84 +1,65 @@
-*  {
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 .field {
-    padding: 20px;
-margin-left: 300px;
-margin-right: 300px;
-background-color: rgb(244, 219, 31);
-
-
+  padding: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
+  background-color: #242c41;
 }
 
 .form {
-
-    width: 100%;
-    padding: 12px 2px;
-    box-sizing: border-box;
-    margin-top: 10px;
-    
-
-    
+  width: 100%;
+  padding: 12px 2px;
+  box-sizing: border-box;
+  margin-top: 10px;
 }
 
-
 .country {
-    padding: 20px;
-    margin-left: 300px;
-    margin-right: 300px;
-    background-color: rgb(244, 219, 31);
-
-
-
-
+  padding: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
+  background-color: #242c41;
 }
 
 .email {
-    padding: 20px;
-    margin-left: 300px;
-    margin-right: 300px;
-    background-color: rgb(244, 219, 31);
-
-
-
-
+  padding: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
+  background-color: #242c41;
 }
 
-
 .tel {
-    padding: 20px;
-    margin-left: 300px;
-    margin-right: 300px;
-    background-color: rgb(244, 219, 31);
-
-
-
-
+  padding: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
+  background-color: #242c41;
 }
 
 .text {
-    border-radius: 5px;
-margin-right: 300px;
-margin-bottom: 10px; 
+  border-radius: 5px;
+  margin-right: 300px;
+  margin-bottom: 10px;
+  color: aliceblue;
 }
 
 .button {
-    padding: 20px;
-    background-color: rgb(244, 219, 31);
-    text-align: center;
-    margin-inline: 300px;
-    width: 150px;
-    height: 49px;
-    
+  padding: 20px;
+  background-color: #242c41;
+  text-align: center;
+  margin-inline: 300px;
+  width: 150px;
+  height: 49px;
+  color: aliceblue;
 }
 
 .baslik {
-
-    padding: 20px;
-    margin-top: 10%;
-margin-left: 300px;
-margin-right: 300px;
-background-color: rgb(244, 219, 31);
-text-align: center;
-
+  padding: 20px;
+  margin-top: 10%;
+  margin-left: 300px;
+  margin-right: 300px;
+  background-color: #242c41;
+  text-align: center;
+  color: aliceblue
+  ;
 }

@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import Form from 'react-bootstrap/Form';
 import ModalComponent from "./ModalComponent/index.js";
+
 
 const Contact = () => {
   const [showModal, setShowModal] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
   const [phoneNumberValue, setPhoneValue] = useState("");
-  const [countryValue, setCountryValue] = useState("");
+  const [countryValue, setCountryValue] = useState("Turkiye");
+
 
   const buttonOnClick = () => {
     if (inputValue === "" || emailValue === "" || phoneNumberValue === "") {
@@ -50,13 +53,15 @@ const Contact = () => {
 
           <div className="field">
             <label className="text" required > Country: </label>
-            <select className="form" placeholder="Turkiye" value={countryValue} onChange={(e) => setCountryValue(e.target.value)}>
-              <option value="Turkiye">Turkiye</option>
-              <option value="Azerbaijan">Azerbaijan</option>
-              <option value="Japan">Japan</option>
-              <option value="Serbia">Serbia</option>
-              <option value="France">France</option>
-            </select>
+            <>
+      <Form.Select value={countryValue} onChange={(e) => setCountryValue(e.target.value)} defaultValue="Turkiye" size="lg">
+        <option> Turkiye </option>
+        <option> Azerbaijan </option>
+        <option> Japan </option>
+        <option> Serbia </option>
+        <option> France </option>
+      </Form.Select>
+    </>
           </div>
           <button type="button" className="button" onClick={() => buttonOnClick()}> Enter </button>
         </form>

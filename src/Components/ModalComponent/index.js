@@ -3,7 +3,7 @@ import { Modal, Button } from 'react-bootstrap';
 
 
 export default function ModalComponent({ show ,handleClose ,inputValue ,emailValue ,phoneNumberValue ,countryValue }) {
-  // const [show, setShow] = useState(true);
+  //const [show, setShow] = useState(true);
   // const handleClose = () => setShow(false);
   //const handleShow = () => setShow(true);
   return (
