@@ -1,25 +1,17 @@
 import React from "react"
 import logo from './udentify.jpeg';
 import "./style.css"
-
+import { NavLink } from "react-router-dom";
+import Nav from 'react-bootstrap/Nav';
 
 export default function Header() {
 
-    
     return (
-        <nav className="nav">
-           
+        <Nav className="nav">
             <img src={logo} className="App-logo" alt="logo" />
-            <div>
-            
-            <button className="navTable"> Table </button>
-                </div>
-                <a 
-                    href="https://www.udentify.co/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="header--project"
-                >Web Site</a>
-        </nav>
+            <NavLink to="/Table" className="table--header"> Table </NavLink>
+            <NavLink to="/" className="contact--header"> Contact Form </NavLink>
+            <a href="https://www.udentify.co" target="_blank" className="web--header"> Web Page </a>
+        </Nav>
     )
 }

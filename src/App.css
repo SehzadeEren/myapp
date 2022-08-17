@@ -3,8 +3,8 @@
 }
 .field {
   padding: 20px;
-  margin-left: 300px;
-  margin-right: 300px;
+  margin-left: 30%;
+  margin-right: 30%;
   background-color: #242c41;
 }
 
@@ -17,37 +17,34 @@
 
 .country {
   padding: 20px;
-  margin-left: 300px;
-  margin-right: 300px;
+  margin-left: 30%;
+  margin-right: 30%;
   background-color: #242c41;
 }
 
 .email {
   padding: 20px;
-  margin-left: 300px;
-  margin-right: 300px;
+  margin-left: 30%;
+  margin-right: 30%;
   background-color: #242c41;
 }
 
 .tel {
   padding: 20px;
-  margin-left: 300px;
-  margin-right: 300px;
+  margin-left: 30%;
+  margin-right: 30%;
   background-color: #242c41;
 }
 
 .text {
   border-radius: 5px;
-  margin-right: 300px;
+  margin-right: 30%;
   margin-bottom: 10px;
   color: aliceblue;
 }
 
 .button {
-  padding: 20px;
   background-color: #242c41;
-  text-align: center;
-  margin-inline: 300px;
   width: 150px;
   height: 49px;
   color: aliceblue;
@@ -55,11 +52,16 @@
 
 .baslik {
   padding: 20px;
-  margin-top: 10%;
-  margin-left: 300px;
-  margin-right: 300px;
+  margin-top: 5%;
+  margin-left: 30%;
+  margin-right: 30%;
   background-color: #242c41;
   text-align: center;
-  color: aliceblue
-  ;
+  color: aliceblue;
+}
+
+.button_special {
+  text-align: center;
+  margin: auto;
+  padding-top: 10px;
 }
