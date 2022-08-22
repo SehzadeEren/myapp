@@ -7,24 +7,34 @@
   padding: 1px;
 }
 
-.App-logo {
+.nav .App-logo {
   height: 4vmin;
   pointer-events: none;
   margin-right: 1.5%;
   margin-left: 1%;
 }
 
-.web--header {
+.nav .web--header {
+  color: aliceblue;
+  margin-right: 1%;
+  text-decoration: none;
+}
+
+.nav .table--header {
+  color: aliceblue;
+  margin-right: 1%;
+  text-decoration: none;
+}
+
+.nav .contact--header {
+  text-decoration: none;
   color: aliceblue;
   margin-right: 1%;
 }
 
-.table--header {
-  color: aliceblue;
-  margin-right: 1%;
-}
-
-.contact--header {
-  color: aliceblue;
+.nav .link-active {
+  color: rgb(239, 141, 28);
+  background: #242c41;
+  text-decoration: none;
   margin-right: 1%;
 }

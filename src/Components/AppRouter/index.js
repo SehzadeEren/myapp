@@ -1,7 +1,7 @@
 import React from "react"
 import { Routes, Route } from "react-router-dom"
 import Contact from "../Contact"
-import Table from "../../Pages/Table"
+import AppTable from "../../Pages/Table"
 
 function AppRouter() {
     
@@ -9,7 +9,7 @@ function AppRouter() {
         
             <Routes>
                 <Route path="/" element={<Contact/>} />
-                <Route path="/Table" element={<Table />} /> 
+                <Route path="/Table" element={<AppTable />} /> 
             </Routes>
         
     )

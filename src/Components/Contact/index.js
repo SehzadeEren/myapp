@@ -1,19 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Form from 'react-bootstrap/Form';
-import ModalComponent from "./ModalComponent/index.js";
-import Button from 'react-bootstrap/Button';
+import ModalComponent from "../ModalComponent/index.js";
 import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 import { Alert } from "react-bootstrap";
-
+import { GlobalContext } from "../Context/context.js";
 
 const Contact = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [inputValue, setInputValue] = useState("");
-  const [emailValue, setEmailValue] = useState("");
-  const [phoneNumberValue, setPhoneValue] = useState("");
-  const [countryValue, setCountryValue] = useState("Turkiye");
-
+  const {
+    inputValue,
+    setInputValue,
+    showModal,
+    setShowModal,
+    emailValue,
+    setEmailValue,
+    phoneNumberValue,
+    setPhoneValue,
+    countryValue,
+    setCountryValue,
+    addFormData,
+    setAddFormData,
+  } = useContext(GlobalContext);
 
   const buttonOnClick = () => {
     if (inputValue === "" || emailValue === "" || phoneNumberValue === "") {
@@ -23,8 +29,20 @@ const Contact = () => {
       // setInputValue("");
       //setEmailValue("");
       //setPhoneValue("");
-      // sa
+      
     }
+
+    const newToTable = [
+      ...addFormData,
+      {
+        fullName: inputValue,
+        email: emailValue,
+        phoneNumber: phoneNumberValue,
+        country: countryValue,
+      },
+    ];
+    setAddFormData(newToTable);
+
     console.log(`Form submitted, ${showModal}`);
 
   }
@@ -33,7 +51,6 @@ const Contact = () => {
   return (
     <>
       <div className="main">
-
         <form>
           <div className="baslik">
             <div className="container center">
@@ -66,7 +83,7 @@ const Contact = () => {
           <div className="field">
             <label className="text" required > Country: </label>
             <>
-              <Form.Select value={countryValue} onChange={(e) => setCountryValue(e.target.value)} defaultValue="Turkiye" size="lg">
+              <Form.Select value={countryValue} onChange={(e) => setCountryValue(e.target.value)} defaultValue="Seçiniz" size="lg">
                 <option> Turkiye </option>
                 <option> Azerbaijan </option>
                 <option> Japan </option>
@@ -83,14 +100,11 @@ const Contact = () => {
         </form>
 
         {!showModal && (inputValue === "" || emailValue === "" || phoneNumberValue === "") &&
-          <Alert><div> Hata Var </div> </Alert> }
+          <Alert><div> Hata Var </div> </Alert>}
       </div>
 
-      <ModalComponent show={showModal}
-        inputValue={inputValue}
-        emailValue={emailValue}
-        phoneNumberValue={phoneNumberValue}
-        countryValue={countryValue}
+      <ModalComponent
+        show={showModal}
         handleClose={() => setShowModal(!showModal)} />
     </>
   );
