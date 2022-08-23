@@ -52,7 +52,7 @@
 
 .baslik {
   padding: 10px;
-  margin-top: 3.10%;
+  margin-top: 3.1%;
   margin-left: 30%;
   margin-right: 30%;
   background-color: #242c41;
@@ -65,4 +65,14 @@
   margin: auto;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.icon-delete {
+  width: 40px;
+  height: 40px;
+  background-image: url(../public/icon/delete.svg);
+  margin: auto;
+}
+
+.icon-delete:hover {
+  cursor: pointer;
 }

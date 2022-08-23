@@ -29,12 +29,13 @@ const Contact = () => {
       // setInputValue("");
       //setEmailValue("");
       //setPhoneValue("");
-      
+
     }
 
     const newToTable = [
       ...addFormData,
       {
+        id: "",
         fullName: inputValue,
         email: emailValue,
         phoneNumber: phoneNumberValue,

@@ -1,20 +1,18 @@
-
 import { Modal, Button } from 'react-bootstrap';
 import { useContext } from 'react';
 import { GlobalContext } from '../Context/context';
 
 
-
-export default function ModalComponent({show, handleClose}) {
+export default function ModalComponent({ show, handleClose }) {
   //const [show, setShow] = useState(true);
   // const handleClose = () => setShow(false);
   //const handleShow = () => setShow(true);
   const {
     inputValue,
-        emailValue,
+    emailValue,
     phoneNumberValue,
     countryValue,
-    } = useContext(GlobalContext);
+  } = useContext(GlobalContext);
   return (
     <>
       <Modal

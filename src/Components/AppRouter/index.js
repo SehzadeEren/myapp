@@ -4,14 +4,14 @@ import Contact from "../Contact"
 import AppTable from "../../Pages/Table"
 
 function AppRouter() {
-    
+
     return (
-        
-            <Routes>
-                <Route path="/" element={<Contact/>} />
-                <Route path="/Table" element={<AppTable />} /> 
-            </Routes>
-        
+
+        <Routes>
+            <Route path="/" element={<Contact />} />
+            <Route path="/Table" element={<AppTable />} />
+        </Routes>
+
     )
 }
 

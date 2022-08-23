@@ -1,12 +1,13 @@
 import Table from 'react-bootstrap/Table';
-import { useContext } from "react";
+import { Fragment, useContext } from "react";
 import { GlobalContext } from "../../Components/Context/context";
-import { AiTwotoneDelete } from "react-icons/ai";
 import "./style.css"
+import ReadRow from '../ReadRow';
 
 
 const AppTable = () => {
     const { addFormData } = useContext(GlobalContext);
+
     return (
 
         <div className="table_container">
@@ -18,20 +19,19 @@ const AppTable = () => {
                             <th>Email</th>
                             <th>Phone Number</th>
                             <th>Country</th>
-                            <th>Delete  <button><AiTwotoneDelete/></button>  </th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
 
-                        {addFormData.map((addForm, i) => (
-                            <tr key={i} >
-                                <td>{addForm.fullName}</td>
-                                <td>{addForm.email}</td>
-                                <td>{addForm.phoneNumber}</td>
-                                <td>{addForm.country}</td>
-                            </tr>
+                        {addFormData.map((addForm, index) => (
+                            addForm.id = index,
+                            <Fragment>
+                                <ReadRow
+                                    addForm={addForm}
+                                />
+                            </Fragment>
                         ))}
-
                     </tbody>
                 </Table>
             </form>
@@ -39,6 +39,6 @@ const AppTable = () => {
 
 
     );
-}
+};
 
 export default AppTable;
