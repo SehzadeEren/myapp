@@ -4,6 +4,7 @@ import ModalComponent from "../ModalComponent/index.js";
 import Col from 'react-bootstrap/Col';
 import { Alert } from "react-bootstrap";
 import { GlobalContext } from "../Context/context.js";
+import { Modal, Button } from 'react-bootstrap';
 
 const Contact = () => {
   const {
@@ -19,6 +20,7 @@ const Contact = () => {
     setCountryValue,
     addFormData,
     setAddFormData,
+    handleClose,
   } = useContext(GlobalContext);
 
   const buttonOnClick = () => {
@@ -47,9 +49,8 @@ const Contact = () => {
     console.log(`Form submitted, ${showModal}`);
 
   }
-
-
-  return (
+  
+return (
     <>
       <div className="main">
         <form>
@@ -95,7 +96,7 @@ const Contact = () => {
           </div>
 
           <div className="button_special">
-            <button type="button" className="button" onClick={() => buttonOnClick()}> Enter </button>
+            <button type="button" className="button" onClick={() => buttonOnClick()}> Submit </button>
           </div>
 
         </form>
@@ -106,7 +107,23 @@ const Contact = () => {
 
       <ModalComponent
         show={showModal}
-        handleClose={() => setShowModal(!showModal)} />
+        handleClose={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Contact Information</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Name And Surname: {inputValue} <br></br>
+          E-Mail: {emailValue} <br></br>
+          Phone Number: {phoneNumberValue} <br></br>
+          Country: {countryValue}
+        </Modal.Body>
+        <Modal.Footer>
+        <Button variant="primary" onClick={handleClose}>
+          Understood
+        </Button>
+        {/* <Button variant="secondary" >Understood</Button> */}
+      </Modal.Footer>
+      </ModalComponent>
     </>
   );
 };

@@ -10,6 +10,7 @@ export const ContextProvider = ({ children }) => {
     const [phoneNumberValue, setPhoneValue] = useState("");
     const [countryValue, setCountryValue] = useState("Turkiye");
     const [addFormData, setAddFormData] = useState([]);
+    const handleClose=() => setShowModal(!showModal);
     return (
         <GlobalContext.Provider value={{
             showModal,
@@ -24,6 +25,7 @@ export const ContextProvider = ({ children }) => {
             setCountryValue,
             addFormData,
             setAddFormData,
+            handleClose,
         }} >
             {children}
         </GlobalContext.Provider>

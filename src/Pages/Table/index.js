@@ -19,7 +19,7 @@ const AppTable = () => {
                             <th>Email</th>
                             <th>Phone Number</th>
                             <th>Country</th>
-                            <th>Delete</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
