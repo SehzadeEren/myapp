@@ -4,15 +4,7 @@ import { GlobalContext } from '../Context/context';
 
 
 export default function ModalComponent({ show, handleClose, children }) {
-  //const [show, setShow] = useState(true);
-  //const handleModalClose = () => setShow(false);
-  //const handleShow = () => setShow(true);
- /* const {
-    inputValue,
-    emailValue,
-    phoneNumberValue,
-    countryValue,
-  } =*/
+
    useContext(GlobalContext);
   return (
     <>

@@ -11,6 +11,31 @@ export const ContextProvider = ({ children }) => {
     const [countryValue, setCountryValue] = useState("Turkiye");
     const [addFormData, setAddFormData] = useState([]);
     const handleClose=() => setShowModal(!showModal);
+    const [editContactId, setEditContactId] = useState(null);
+    const [editFormData, setEditFormData] = useState({
+        fullName: "",
+        email: "",
+        phoneNumber: "",
+        country: "",
+        
+      });
+      
+      const handleEditFormChange = (event) => {
+        event.preventDefault();
+    
+        const fieldName = event.target.getAttribute("name");
+        const fieldValue = event.target.value;
+    
+        const newFormData = { ...editFormData };
+        newFormData[fieldName] = fieldValue;
+    
+        setEditFormData(newFormData);
+      };
+      const handleCancelClick = () => {
+        setEditContactId(null);
+      };
+    
+
     return (
         <GlobalContext.Provider value={{
             showModal,
@@ -26,6 +51,12 @@ export const ContextProvider = ({ children }) => {
             addFormData,
             setAddFormData,
             handleClose,
+            editFormData,
+            setEditFormData,
+            handleEditFormChange,
+            editContactId,
+            setEditContactId,
+            handleCancelClick,
         }} >
             {children}
         </GlobalContext.Provider>

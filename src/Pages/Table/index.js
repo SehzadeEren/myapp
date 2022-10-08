@@ -3,10 +3,10 @@ import { Fragment, useContext } from "react";
 import { GlobalContext } from "../../Components/Context/context";
 import "./style.css"
 import ReadRow from '../ReadRow';
-
+import EditRow from '../EditRow';
 
 const AppTable = () => {
-    const { addFormData } = useContext(GlobalContext);
+    const { addFormData, editContactId } = useContext(GlobalContext);
 
     return (
 
@@ -27,9 +27,13 @@ const AppTable = () => {
                         {addFormData.map((addForm, index) => (
                             addForm.id = index,
                             <Fragment>
-                                <ReadRow
-                                    addForm={addForm}
-                                />
+                                {editContactId === addForm.id ? (
+                                    <EditRow />
+                                ) : (
+                                    <ReadRow
+                                        addForm={addForm}
+                                    />
+                                )}
                             </Fragment>
                         ))}
                     </tbody>

@@ -76,3 +76,38 @@
 .icon-delete:hover {
   cursor: pointer;
 }
+
+.icon-edit {
+  width: 40px;
+  height: 40px;
+  background-image: url(../public/icon/edit.svg);
+  margin: auto;
+}
+
+.icon-edit:hover {
+  cursor: pointer;
+}
+
+
+.icon-save {
+  width: 40px;
+  height: 40px;
+  background-image: url(../public/icon/save.svg);
+  margin: auto;
+}
+
+
+.icon-save:hover {
+  cursor: pointer;
+}
+
+.icon-cancel {
+  width: 40px;
+  height: 40px;
+  background-image: url(../public/icon/cancel.svg);
+  margin: auto;
+}
+
+.icon-cancel:hover {
+  cursor: pointer; 
+}
